@@ -1,0 +1,235 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: var(--color-white);
+}
+
+/* header */
+.header {
+  grid-area: header;
+  background-color: var(--color-quaternary);
+}
+.header__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.header__action {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: solid 1px var(--color-white);
+  border-radius: 3px;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+.header__title {
+  text-align: center;
+}
+
+.language_select {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-self: flex-end;
+  width: fit-content;
+  padding-inline: 1rem;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.language_select::picker(select) {
+  padding-block: 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+.language_select__option {
+  padding-block: 0.5rem;
+}
+.language_select__option:hover {
+  background-color: var(--color-primary);
+}
+.language_select__option:checked {
+  background-color: var(--color-quaternary);
+}
+.language_select__option::checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+}
+
+.language_select__option:checked::checkmark {
+  content: "✅️";
+}
+
+/* description_video */
+.description_video {
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-primary);
+}
+.description_video__inner {
+  max-width: 800px;
+  padding: 2rem;
+}
+.description_video__video {
+  width: 100%;
+  max-height: 100%;
+}
+
+/* main */
+.main {
+  grid-area: main;
+  overflow-y: auto;
+}
+.main__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: var(--color-primary);
+}
+
+/* quetionnaire */
+.quetionnaire {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.quetionnaire__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+.quetionnaire__list {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  list-style: none;
+}
+.quetionnaire__item {
+  padding: 2rem;
+  border-top: 5px solid var(--color-white);
+}
+.quetionnaire__item:last-child {
+  border-bottom: 5px solid var(--color-white);
+}
+.quetionnaire__action {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.quetionnaire__submit {
+  padding: 0.5rem 2rem;
+  border: solid 1px var(--color-tertiary);
+  border-radius: 3px;
+  background-color: var(--color-tertiary);
+  cursor: pointer;
+}
+
+/* question */
+.question {
+  padding: 0;
+  border: none;
+}
+.question__title {
+  font-size: 1.2rem;
+}
+.question__options {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 1.5rem;
+}
+.question__option {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  border: solid 1px var(--color-primary);
+  border-radius: 3px;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+.question__option:has(input:checked) {
+  background-color: var(--color-quaternary);
+}
+.question__radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* footer */
+.footer {
+  grid-area: footer;
+  background-color: var(--color-secondary);
+}
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* tooltip */
+.annotation {
+  padding: 0;
+  appearance: none;
+  color: var(--color-default-text);
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.annotation.annotation--first {
+  anchor-name: --annotation-first;
+}
+.annotation.annotation--second {
+  anchor-name: --annotation-second;
+}
+.annotation.annotation--third {
+  anchor-name: --annotation-third;
+}
+.annotation.annotation--fourth {
+  anchor-name: --annotation-fourth;
+}
+.annotation.annotation--fifth {
+  anchor-name: --annotation-fifth;
+}
+.tooltip {
+  position-anchor: --annotation;
+  position-area: top;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 3px;
+}
+.tooltip.tooltip--first {
+  position-anchor: --annotation-first;
+}
+.tooltip.tooltip--second {
+  position-anchor: --annotation-second;
+}
+.tooltip.tooltip--third {
+  position-anchor: --annotation-third;
+}
+.tooltip.tooltip--fourth {
+  position-anchor: --annotation-fourth;
+}
+.tooltip.tooltip--fifth {
+  position-anchor: --annotation-fifth;
+}

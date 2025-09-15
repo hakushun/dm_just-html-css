@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #f5efe6;
+  --color-secondary: #e8dfca;
+  --color-tertiary: #6d94c5;
+  --color-quaternary: #cbdceb;
+
+  --color-white: #f5f4f0;
+
+  --color-default-text: #333;
+}
+
+html {
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--color-default-text);
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML&CSS DEMO</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__inner">
+          <button type="button" commandfor="description_video" command="show-modal" class="header__action">説明動画を見る</button>
+          <h1 class="header__title">HTML&CSS DEMO</h1>
+          <select name="language" class="language_select">
+            <option value="ja" class="language_select__option">日本語</option>
+            <option value="en" class="language_select__option">英語</option>
+            <option value="ch" class="language_select__option">中国語</option>
+            <option value="ko" class="language_select__option">韓国語</option>
+          </select>
+        </div>
+        <dialog id="description_video" closedby="any" class="description_video">
+          <div class="description_video__inner">
+            <video src="https://cdn.pixabay.com/video/2025/05/04/276624_large.mp4" controls class="description_video__video" />
+          </div>
+        </dialog>
+      </header>
+      <main class="main">
+        <div class="main__inner">
+          <form class="quetionnaire">
+            <div class="quetionnaire__header">
+              <h2>ストレスチェック</h2>
+              <p>以下の問について、自分の状態に合うものを選んでください。</p>
+            </div>
+            <ul class="quetionnaire__list">
+              <li class="quetionnaire__item">
+                <fieldset class="question">
+                  <legend class="question__title">
+                    最近、<button type="button" popovertarget="annotation_1" class="annotation annotation--first">
+                      よく眠れて</button
+                    >いますか？
+                    <div id="annotation_1" class="tooltip tooltip--first" popover>
+                      <p>１週間の平均で6時間以上</p>
+                    </div>
+                  </legend>
+                  <div class="question__options">
+                    <label for="question1_1" class="question__option">
+                      <input type="radio" id="question1_1" name="question1" value="1" class="question__radio" />
+                      とても当てはまる
+                    </label>
+                    <label for="question1_2" class="question__option">
+                      <input type="radio" id="question1_2" name="question1" value="2" class="question__radio" />
+                      当てはまる
+                    </label>
+                    <label for="question1_3" class="question__option">
+                      <input type="radio" id="question1_3" name="question1" value="3" class="question__radio" />
+                      どちらとも言えない
+                    </label>
+                    <label for="question1_4" class="question__option">
+                      <input type="radio" id="question1_4" name="question1" value="4" class="question__radio" />
+                      当てはまらない
+                    </label>
+                    <label for="question1_5" class="question__option">
+                      <input type="radio" id="question1_5" name="question1" value="5" class="question__radio" />
+                      とても当てはまらない
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+              <li class="quetionnaire__item">
+                <fieldset class="question">
+                  <legend class="question__title">
+                    最近、<button type="button" popovertarget="annotation_2" class="annotation annotation--second">食欲</button
+                    >がありますか？
+                    <div id="annotation_2" class="tooltip tooltip--second" popover>
+                      <p>1日3食摂っている</p>
+                    </div>
+                  </legend>
+                  <div class="question__options">
+                    <label for="question2_1" class="question__option">
+                      <input type="radio" id="question2_1" name="question2" value="1" class="question__radio" />
+                      とても当てはまる
+                    </label>
+                    <label for="question2_2" class="question__option">
+                      <input type="radio" id="question2_2" name="question2" value="2" class="question__radio" />
+                      当てはまる
+                    </label>
+                    <label for="question2_3" class="question__option">
+                      <input type="radio" id="question2_3" name="question2" value="3" class="question__radio" />
+                      どちらとも言えない
+                    </label>
+                    <label for="question2_4" class="question__option">
+                      <input type="radio" id="question2_4" name="question2" value="4" class="question__radio" />
+                      当てはまらない
+                    </label>
+                    <label for="question2_5" class="question__option">
+                      <input type="radio" id="question2_5" name="question2" value="5" class="question__radio" />
+                      とても当てはまらない
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+              <li class="quetionnaire__item">
+                <fieldset class="question">
+                  <legend class="question__title">
+                    最近、<button type="button" popovertarget="annotation_3" class="annotation annotation--third">体が重い</button
+                    >ですか？
+                    <div id="annotation_3" class="tooltip tooltip--third" popover>
+                      <p>体が重い</p>
+                    </div>
+                  </legend>
+                  <div class="question__options">
+                    <label for="question3_1" class="question__option">
+                      <input type="radio" id="question3_1" name="question3" value="1" class="question__radio" />
+                      とても当てはまる
+                    </label>
+                    <label for="question3_2" class="question__option">
+                      <input type="radio" id="question3_2" name="question3" value="2" class="question__radio" />
+                      当てはまる
+                    </label>
+                    <label for="question3_3" class="question__option">
+                      <input type="radio" id="question3_3" name="question3" value="3" class="question__radio" />
+                      どちらとも言えない
+                    </label>
+                    <label for="question3_4" class="question__option">
+                      <input type="radio" id="question3_4" name="question3" value="4" class="question__radio" />
+                      当てはまらない
+                    </label>
+                    <label for="question3_5" class="question__option">
+                      <input type="radio" id="question3_5" name="question3" value="5" class="question__radio" />
+                      とても当てはまらない
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+              <li class="quetionnaire__item">
+                <fieldset class="question">
+                  <legend class="question__title">
+                    最近、<button type="button" popovertarget="annotation_4" class="annotation annotation--fourth">
+                      仕事量が多い</button
+                    >と感じますか？
+                    <div id="annotation_4" class="tooltip tooltip--fourth" popover>
+                      <p>残業しないと終わらない</p>
+                    </div>
+                  </legend>
+                  <div class="question__options">
+                    <label for="question4_1" class="question__option">
+                      <input type="radio" id="question4_1" name="question4" value="1" class="question__radio" />
+                      とても当てはまる
+                    </label>
+                    <label for="question4_2" class="question__option">
+                      <input type="radio" id="question4_2" name="question4" value="2" class="question__radio" />
+                      当てはまる
+                    </label>
+                    <label for="question4_3" class="question__option">
+                      <input type="radio" id="question4_3" name="question4" value="3" class="question__radio" />
+                      どちらとも言えない
+                    </label>
+                    <label for="question4_4" class="question__option">
+                      <input type="radio" id="question4_4" name="question4" value="4" class="question__radio" />
+                      当てはまらない
+                    </label>
+                    <label for="question4_5" class="question__option">
+                      <input type="radio" id="question4_5" name="question4" value="5" class="question__radio" />
+                      とても当てはまらない
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+              <li class="quetionnaire__item">
+                <fieldset class="question">
+                  <legend class="question__title">
+                    最近、<button type="button" popovertarget="annotation_5" class="annotation annotation--fifth">
+                      疲れが取れない</button
+                    >と感じますか？
+                    <div id="annotation_5" class="tooltip tooltip--fifth" popover>
+                      <p>朝の目覚めが悪い</p>
+                    </div>
+                  </legend>
+                  <div class="question__options">
+                    <label for="question5_1" class="question__option">
+                      <input type="radio" id="question5_1" name="question5" value="1" class="question__radio" />
+                      とても当てはまる
+                    </label>
+                    <label for="question5_2" class="question__option">
+                      <input type="radio" id="question5_2" name="question5" value="2" class="question__radio" />
+                      当てはまる
+                    </label>
+                    <label for="question5_3" class="question__option">
+                      <input type="radio" id="question5_3" name="question5" value="3" class="question__radio" />
+                      どちらとも言えない
+                    </label>
+                    <label for="question5_4" class="question__option">
+                      <input type="radio" id="question5_4" name="question5" value="4" class="question__radio" />
+                      当てはまらない
+                    </label>
+                    <label for="question5_5" class="question__option">
+                      <input type="radio" id="question5_5" name="question5" value="5" class="question__radio" />
+                      とても当てはまらない
+                    </label>
+                  </div>
+                </fieldset>
+              </li>
+            </ul>
+            <div class="quetionnaire__action">
+              <button type="submit" class="quetionnaire__submit">回答を送信</button>
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <small>Copyright &copy; 2025 HTML&CSS DEMO</small>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
