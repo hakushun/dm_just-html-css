@@ -19,6 +19,7 @@
 .header__inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
@@ -26,6 +27,7 @@
 .header__action {
   width: fit-content;
   padding: 0.5rem 1rem;
+  font-size: var(--font-size-small);
   border: solid 1px var(--color-white);
   border-radius: 3px;
   background-color: var(--color-white);
@@ -33,6 +35,7 @@
 }
 .header__title {
   text-align: center;
+  font-size: var(--font-size-large);
 }
 
 .language_select {
@@ -145,7 +148,7 @@
   border: none;
 }
 .question__title {
-  font-size: 1.2rem;
+  font-size: var(--font-size-large);
 }
 .question__options {
   display: flex;
@@ -155,7 +158,7 @@
 .question__option {
   width: 100%;
   padding: 0.5rem 0;
-  font-size: 0.9rem;
+  font-size: var(--font-size-small);
   text-align: center;
   border: solid 1px var(--color-primary);
   border-radius: 3px;
@@ -213,7 +216,7 @@
   position-anchor: --annotation;
   position-area: top;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   background-color: var(--color-secondary);
   border: none;
   border-radius: 3px;

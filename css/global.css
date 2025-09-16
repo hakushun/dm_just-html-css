@@ -7,6 +7,10 @@
   --color-white: #f5f4f0;
 
   --color-default-text: #333;
+
+  --font-size-base: clamp(16px, calc(14px + 0.5vw), 18px);
+  --font-size-small: clamp(12px, calc(10px + 0.5vw), 14px);
+  --font-size-large: clamp(20px, calc(18px + 0.5vw), 22px);
 }
 
 html {
@@ -19,6 +23,7 @@ body {
   overflow-y: hidden;
   font-family: "Noto Sans JP", sans-serif;
   color: var(--color-default-text);
+  font-size: var(--font-size-base);
 }
 
 select,
